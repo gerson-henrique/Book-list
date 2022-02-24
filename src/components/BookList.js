@@ -16,7 +16,7 @@ export default class BookList extends Component {
         <li style={{ background: theme.ui}}>p3</li>
         </ul>
       </div>)
-    }}
+}}
       </ThemeContext.Consumer>
     )
   }
