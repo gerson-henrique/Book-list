@@ -1,18 +1,24 @@
 import React, { Component } from 'react'
+import { ThemeContext } from '../context/ThemeContext'
+
 export default class Navbar extends Component {
   render() {
-
-        
-     return (
-      <nav>
-        <h1> Context App </h1>
-        <ul>
-          <li>Projeto</li>
-          <li>Jogar</li>
-          <li>Sobre Mim</li>
-        </ul>
-      </nav>
+    return (
+      <ThemeContext.Consumer>{(themeContext) =>{
       
+      const {isLightMode, light, dark} = themeContext;
+      const theme = isLightMode ? light : dark;
+      
+      return (<nav style={{background:theme.ui, color:theme.syntax}}>
+       <h1> Context App</h1>
+        <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        </ul>
+      </nav>)
+}}
+      </ThemeContext.Consumer>
     )
   }
 }

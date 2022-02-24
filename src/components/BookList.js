@@ -4,7 +4,7 @@ import { ThemeContext } from '../context/ThemeContext'
 export default class BookList extends Component {
   render() {
     return (
-      <ThemeContext>{(themeContext) =>{
+      <ThemeContext.Consumer>{(themeContext) =>{
       
       const {isLightMode, light, dark} = themeContext;
       const theme = isLightMode ? light : dark;
@@ -17,7 +17,7 @@ export default class BookList extends Component {
         </ul>
       </div>)
     }}
-      </ThemeContext>
+      </ThemeContext.Consumer>
     )
   }
 }
