@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-
 export default class Navbar extends Component {
   render() {
-    return (
+
+        
+     return (
       <nav>
         <h1> Context App </h1>
         <ul>
@@ -11,6 +12,7 @@ export default class Navbar extends Component {
           <li>Sobre Mim</li>
         </ul>
       </nav>
+      
     )
   }
 }
