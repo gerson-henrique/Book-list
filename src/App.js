@@ -4,11 +4,13 @@ import BookList from './components/BookList';
 import Navbar from './components/Navbar';
 import ThemeToogle from './components/ThemeToogle';
 import AuthContextProvider from './context/AuthContext';
+import BookContextProvider from './context/BookContext';
 import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <div className="App">
+      <BookContextProvider>
       <AuthContextProvider>
       <ThemeContextProvider>
       <Navbar />
@@ -16,6 +18,7 @@ function App() {
       <ThemeToogle />
       </ThemeContextProvider>
       </AuthContextProvider>
+      </BookContextProvider>
     </div>
   );
 }
